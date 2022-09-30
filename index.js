@@ -292,3 +292,20 @@ function changeBackgroundColor(){
 // ---------------------------------------------------------------------------
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Reveal Event 
+
+// get element
+// const revealBtn = document.querySelector('.reveal-btn');
+// const hiddenContent = document.querySelector('.hidden-content')
+
+// create function
+function revealContent(){
+    // if(hiddenContent.classList.contains('reveal-btn')){          // have element class (reveal-btn)?
+        // hiddenContent.classList.remove('reveal-btn');            // if true, remove him
+    // }else{       
+        // hiddenContent.classList.add('reveal-btn');               // if false, add him
+    };
+
+// Add event to element
+// revealBtn.addEventListener('click', revealContent)
+
+

@@ -50,11 +50,16 @@ body {
     border-radius: 25px;
     border: 5px solid black;
     margin: 0 auto;
-    font-size: 1rem;
-    max-width: 500px;
+    font-size: 1.8rem;
+    max-width: 1000px;
     width: 100%;
     padding: 50px;
     height: 100%;
+    transition: .3s ease;
+    display: none;
+}
+.hidden-content.reveal-btn{
+    display: block;
 }
 
 .container button {
