@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.800);
+}
+
+body {
+    background-color: rgba(22, 46, 85, 0.8);
+    color: rgba(255, 255, 255, 0.800);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container a{
+    padding: 25px;
+    margin: 0 auto;
+    font-size: 3rem;
+}
+.main-heading {
+    text-align: center;
+    padding: 50px;
+    font-size: 4rem;
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-items {
+    padding: 50px;
+    height: 70vh;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid rgba(255, 255, 255, 0.800);
+    border-radius: 25px;
+}
+
+.btn {
+    padding: 25px 50px;
+    border: 5px solid rgba(255, 255, 255, 0.800);
+    border-radius: 25px;
+    transition: .1s ease;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255, 0.900);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2.5rem;
+    border: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.btn:active{
+    font-size: 2.2rem;
+    background-color: rgba(197, 197, 197, 0.9);
+}
