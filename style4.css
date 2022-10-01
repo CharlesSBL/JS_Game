@@ -28,12 +28,16 @@ body {
     background-size: cover;
     display: flex;
     justify-content: space-around;
+    /* padding: 100px; */
     align-items: center;
     padding-top: 10vh;
 }
-.count{
-    background-color: rgba(194, 84, 0, 0.2);
+
+.count {
+    color: rgba(255, 255, 255, 0.723);
+    background-color: rgb(128, 68, 68);
     padding: 25px;
+    margin-bottom: 50px;
     border: 10px solid brown;
     border-radius: 25px;
     display: flex;
@@ -43,22 +47,25 @@ body {
     font-size: 3rem;
     /* margin-right: 150px; */
 }
+
 .container {
+    /* color: rgba(255, 255, 255, 0.723); */
     display: flex;
     border: 25px solid rgb(40, 18, 0);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 150px;
     border-radius: 25px;
     overflow: hidden;
     transition: .3s ease;
 }
 
 .text {
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.723);
     max-width: 500px;
     font-size: 2rem;
-    background-color: rgba(194, 84, 0, 0.2);
+    background-color: rgb(128, 68, 68);
     border: 10px solid rgb(159, 71, 0);
     border-radius: 25px;
     padding: 25px;
@@ -75,13 +82,13 @@ li {
     align-items: center;
     cursor: pointer;
     overflow: hidden;
-    
+
     border: 5px solid rgb(68, 30, 0);
 }
 
 li:hover {
     border-radius: 5px;
-    
+
     border: 5px solid rgb(170, 76, 0);
 }
 
@@ -97,8 +104,8 @@ li:active {
 }
 
 h1 {
-    background-color: rgba(194, 84, 0, 0.2);
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.723);
+    background-color: rgb(128, 68, 68);
     width: 100%;
     text-align: center;
     font-size: 3rem;
@@ -112,7 +119,7 @@ h1 {
     background: rgba(0, 0, 255, 0.514);
 }
 
-.list-item_1:hover{
+.list-item_1:hover {
     background: rgba(0, 0, 250, 1);
 }
 
@@ -122,7 +129,7 @@ h1 {
     background: rgba(255, 0, 0, 0.534);
 }
 
-.list-item_2:hover{
+.list-item_2:hover {
     background: rgba(255, 0, 0, 1);
 }
 
@@ -132,7 +139,7 @@ h1 {
     background: rgba(0, 255, 60, 0.504);
 }
 
-.list-item_3:hover{
+.list-item_3:hover {
     background: rgba(0, 255, 60, 1);
 }
 
@@ -142,7 +149,7 @@ h1 {
     background: rgba(217, 0, 255, 0.536);
 }
 
-.list-item_4:hover{
+.list-item_4:hover {
     background: rgba(217, 0, 250, 1);
 }
 
@@ -152,7 +159,7 @@ h1 {
     background: rgba(255, 251, 0, 0.501);
 }
 
-.list-item_5:hover{
+.list-item_5:hover {
     background: rgba(255, 251, 0, 1);
 }
 
@@ -162,7 +169,7 @@ h1 {
     background: rgba(0, 157, 255, 0.551);
 }
 
-.list-item_6:hover{
+.list-item_6:hover {
     background: rgba(0, 157, 250, 1);
 }
 
@@ -172,7 +179,7 @@ h1 {
     background: rgba(255, 149, 0, 0.484);
 }
 
-.list-item_7:hover{
+.list-item_7:hover {
     background: rgba(255, 149, 0, 1);
 }
 
@@ -182,7 +189,7 @@ h1 {
     background: rgba(140, 255, 0, 0.515);
 }
 
-.list-item_8:hover{
+.list-item_8:hover {
     background: rgba(140, 255, 0, 1);
 }
 
@@ -192,6 +199,6 @@ h1 {
     background: rgba(89, 0, 255, 0.504);
 }
 
-.list-item_9:hover{
+.list-item_9:hover {
     background: rgba(89, 0, 250, 1);
 }

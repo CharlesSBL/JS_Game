@@ -340,6 +340,20 @@ const body = document.querySelector('body');
 const img = document.querySelector('img');
 const liList = document.querySelectorAll('li');
 
+
+const winCount = document.querySelector('.win-count');
+const looseCount = document.querySelector('.loose-count');
+const allCount = document.querySelector('.all-count');
+
+
+// =============================================================
+
+let winCount_number = Number(winCount.innerHTML);
+let looseCount_number = Number(looseCount.innerHTML);
+let allCount_number = Number(allCount.innerHTML);
+// ============================================================
+
+
 // add tools
 let pugArray = [];
 let cyfra = Math.floor(Math.random() * 9) + 1;
@@ -358,9 +372,16 @@ console.log(pugArray);
 // add event
 ul.addEventListener("click", (event) => {
     // Check and save number in clicked element
+
+    allCount_number = allCount_number + 1;
+    allCount.innerHTML = allCount_number
+
     let number = 0;
     let color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
     event.target.style.background = color;
+
+
+
 
     for (const entry of liList.entries()) {
         if(entry[1].classList[0] == event.target.classList[0]){
@@ -369,12 +390,24 @@ ul.addEventListener("click", (event) => {
     };
 
     // 
-    if(event.target.classList.contains('active')){
 
+
+
+
+
+    if(event.target.classList.contains('active')){
         if(pugArray.includes(number)){
             // 
+
+            
+            winCount_number = winCount_number + 1;
+            winCount.innerHTML = winCount_number;
+
             color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
             h1.style.background = color;
+
+
+
 
             img.style.display = 'block';
             h1.innerHTML = 'Found him!';
@@ -382,12 +415,19 @@ ul.addEventListener("click", (event) => {
             event.target.style.color = 'white';
             event.target.innerHTML = 'PUG';
             // 
+
+
+
             event.target.classList.remove('active'); 
             // 
+
+
             fastNumber = pugArray[0]
             pugArray = [];
             cyfra = Math.floor(Math.random() * 9) + 1;
             // 
+
+
             if(fastNumber !== cyfra){
                 pugArray.push(cyfra)
                 console.log(pugArray);
@@ -396,6 +436,9 @@ ul.addEventListener("click", (event) => {
                 pugArray.push(cyfra)
                 console.log(pugArray);
             }
+
+
+
             new Promise(() => {
                 setTimeout(()=>{
                     event.target.style.color = 'black';
@@ -404,9 +447,15 @@ ul.addEventListener("click", (event) => {
                     img.style.display = 'none';
                 }, 1000)
             }).then(console.log('win'))
+
+
+
         }else{
             event.target.innerHTML = 'nope';
             event.target.style.fontSize  = '2rem';
+
+            looseCount_number = looseCount_number + 1;
+            looseCount.innerHTML = looseCount_number
 
             new Promise(() => {
                 setTimeout(()=>{
@@ -415,17 +464,21 @@ ul.addEventListener("click", (event) => {
             }).then(console.log('loose'))  
         };
 
-    }else{
-        
-        event.target.classList.add('active');
-            event.target.innerHTML = 'nope';  
-            event.target.style.fontSize  = '2rem';
 
-            new Promise(() => {
-                setTimeout(()=>{
-                    event.target.innerHTML = number;
-                }, 1000)
-            }).then(console.log('win'))
+
+
+    }else{
+        event.target.classList.add('active');
+        event.target.innerHTML = 'nope';  
+        event.target.style.fontSize  = '2rem';
+
+
+
+        new Promise(() => {
+            setTimeout(()=>{
+                event.target.innerHTML = number;
+            }, 1000)
+        }).then(console.log('win'))
          
     };
 }, false);
