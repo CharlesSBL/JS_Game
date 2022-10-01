@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.image{
+    overflow: hidden;
+    max-width: 300px;
+    height: 100px;
+    
+}
+img{
+
+}
+body {
+    transition: .3s ease;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10vh;
+}
+.container{
+    margin-right: 250px;
+    display: flex;
+    border: 5px solid rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+li {
+    transition: .3s ease;
+    opacity: 0.5;
+    list-style: none;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    color: rgb(0, 0, 0);
+    max-width: 500px;
+    font-size: 2rem;
+}
+li:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 1000px rgba(255, 255, 255, 0.500);
+}
+li:active{
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+#grid-block {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+}
+h1{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding: 25px 0;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.list-item_1 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+.list-item_2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.list-item_3 {
+    width: 100px;
+    height: 100px;
+    background: rgb(0, 255, 60);
+}
+
+.list-item_4 {
+    width: 100px;
+    height: 100px;
+    background: rgb(217, 0, 255);
+}
+
+.list-item_5 {
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 251, 0);
+}
+
+.list-item_6 {
+    width: 100px;
+    height: 100px;
+    background: rgb(0, 157, 255);
+}
+
+.list-item_7 {
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 149, 0);
+}
+
+.list-item_8 {
+    width: 100px;
+    height: 100px;
+    background: rgb(140, 255, 0);
+}
+
+.list-item_9 {
+    width: 100px;
+    height: 100px;
+    background: rgb(89, 0, 255);
+}

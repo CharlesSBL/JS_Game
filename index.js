@@ -309,3 +309,88 @@ function revealContent(){
 // revealBtn.addEventListener('click', revealContent)
 
 
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+
+// 6. Event Propagation
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Phases 
+
+// 1. Event Capturing
+// 2. Target
+// 3. Event Bubbling
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Example
+
+// + An element can capture child events 
+// + A good reason to use addEventListener()
+
+// get element
+const ul = document.querySelector('ul');
+const h1 = document.querySelector('h1');
+const body = document.querySelector('body');
+const liList = document.querySelectorAll('li');
+
+// add tools
+let pugArray = [];
+let cyfra = Math.floor(Math.random() * 9) + 1;
+pugArray.push(cyfra);
+console.log(pugArray);
+
+
+
+// add event
+ul.addEventListener("click", (event) => {
+    // Check and save number in clicked element
+    let number = 0;
+    for (const entry of liList.entries()) {
+        if(entry[1].classList[0] == event.target.classList[0]){
+            number = entry[0] + 1;
+        };
+    };
+
+    // 
+    if(event.target.classList.contains('active')){
+
+        if(pugArray.includes(number)){
+            // 
+            body.style.background = 'grey';
+            h1.innerHTML = 'Found him!';
+            event.target.innerHTML = 'PUG';
+            // 
+            event.target.classList.remove('active'); 
+            // 
+            fastNumber = pugArray[0]
+            pugArray = [];
+            cyfra = Math.floor(Math.random() * 9) + 1;
+            // 
+            if(fastNumber !== cyfra){
+                pugArray.push(cyfra)
+                console.log(pugArray);
+            }else{
+                cyfra++;
+                pugArray.push(cyfra)
+                console.log(pugArray);
+            }
+            new Promise(() => {
+                setTimeout(()=>{
+                    body.style.background = 'black';
+                    event.target.innerHTML = number;
+                    h1.innerHTML = 'Find Pug';
+                }, 1000)
+            }).then(console.log('win'))
+        };
+
+    }else{
+        event.target.innerHTML = number;
+        event.target.classList.add('active');
+    };
+}, false);
