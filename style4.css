@@ -203,7 +203,7 @@ h1 {
     background: rgba(89, 0, 250, 1);
 }
 
-@media screen and (max-width: 730px) {
+@media (max-width: 1050px) {
     body{
         flex-direction: column;
     }
