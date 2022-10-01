@@ -202,3 +202,12 @@ h1 {
 .list-item_9:hover {
     background: rgba(89, 0, 250, 1);
 }
+
+@media screen and (max-width: 730px) {
+    body{
+        flex-direction: column;
+    }
+    .container{
+        margin: 0px;
+    }
+}

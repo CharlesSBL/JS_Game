@@ -358,9 +358,11 @@ let allCount_number = Number(allCount.innerHTML);
 let pugArray = [];
 let cyfra = Math.floor(Math.random() * 9) + 1;
 pugArray.push(cyfra);
+cyfra = Math.floor(Math.random() * 9) + 1;
+pugArray.push(cyfra);
 console.log(pugArray);
 
-
+let win_time = 0;
 
 
 // targetBackground = 
@@ -374,13 +376,13 @@ ul.addEventListener("click", (event) => {
     // Check and save number in clicked element
 
     allCount_number = allCount_number + 1;
-    allCount.innerHTML = allCount_number
+    allCount.innerHTML = allCount_number;
 
     let number = 0;
     let color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
     event.target.style.background = color;
 
-
+    
 
 
     for (const entry of liList.entries()) {
@@ -402,6 +404,12 @@ ul.addEventListener("click", (event) => {
             
             winCount_number = winCount_number + 1;
             winCount.innerHTML = winCount_number;
+
+            win_time = winCount_number;
+            if(win_time == 10){
+                alert('win');
+                window.location.reload();
+            }
 
             color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
             h1.style.background = color;
@@ -430,9 +438,13 @@ ul.addEventListener("click", (event) => {
 
             if(fastNumber !== cyfra){
                 pugArray.push(cyfra)
+                cyfra = Math.floor(Math.random() * 9) + 1;
+                pugArray.push(cyfra)
                 console.log(pugArray);
             }else{
                 cyfra++;
+                pugArray.push(cyfra)
+                cyfra = Math.floor(Math.random() * 9) + 1;
                 pugArray.push(cyfra)
                 console.log(pugArray);
             }
@@ -482,3 +494,9 @@ ul.addEventListener("click", (event) => {
          
     };
 }, false);
+
+
+
+// if(win_time == 10){
+    // alert("you win!")
+// }
