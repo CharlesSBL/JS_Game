@@ -4,7 +4,9 @@
     margin: 0;
     transition: .3s ease;
 }
-
+.p_remove{
+    text-align: left;
+}
 .image {
     overflow: hidden;
     width: 300px;

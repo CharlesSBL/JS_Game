@@ -340,6 +340,9 @@ const body = document.querySelector('body');
 const img = document.querySelector('img');
 const liList = document.querySelectorAll('li');
 
+const container01 = document.querySelector('.container01');
+const container = document.querySelector('.container');
+const p_remove = document.querySelector('.p_remove');
 
 const winCount = document.querySelector('.win-count');
 const looseCount = document.querySelector('.loose-count');
@@ -407,8 +410,13 @@ ul.addEventListener("click", (event) => {
 
             win_time = winCount_number;
             if(win_time == 10){
-                alert('win');
-                window.location.reload();
+                // alert('win');
+                // window.location.reload();
+                // container01.remove();
+                container.remove();
+                p_remove.style.textAlign = 'center';
+                p_remove.innerHTML = 'You Win!!!';
+
             }
 
             color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
