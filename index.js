@@ -337,6 +337,7 @@ function revealContent(){
 const ul = document.querySelector('ul');
 const h1 = document.querySelector('h1');
 const body = document.querySelector('body');
+const img = document.querySelector('img');
 const liList = document.querySelectorAll('li');
 
 // add tools
@@ -347,10 +348,20 @@ console.log(pugArray);
 
 
 
+
+// targetBackground = 
+
+// console.log(color);
+
+
+
 // add event
 ul.addEventListener("click", (event) => {
     // Check and save number in clicked element
     let number = 0;
+    let color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+    event.target.style.background = color;
+
     for (const entry of liList.entries()) {
         if(entry[1].classList[0] == event.target.classList[0]){
             number = entry[0] + 1;
@@ -362,8 +373,13 @@ ul.addEventListener("click", (event) => {
 
         if(pugArray.includes(number)){
             // 
-            body.style.background = 'grey';
+            color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+            h1.style.background = color;
+
+            img.style.display = 'block';
             h1.innerHTML = 'Found him!';
+            event.target.style.fontSize = '2rem';
+            event.target.style.color = 'white';
             event.target.innerHTML = 'PUG';
             // 
             event.target.classList.remove('active'); 
@@ -382,15 +398,34 @@ ul.addEventListener("click", (event) => {
             }
             new Promise(() => {
                 setTimeout(()=>{
-                    body.style.background = 'black';
+                    event.target.style.color = 'black';
                     event.target.innerHTML = number;
                     h1.innerHTML = 'Find Pug';
+                    img.style.display = 'none';
                 }, 1000)
             }).then(console.log('win'))
+        }else{
+            event.target.innerHTML = 'nope';
+            event.target.style.fontSize  = '2rem';
+
+            new Promise(() => {
+                setTimeout(()=>{
+                    event.target.innerHTML = number;
+                }, 1000)
+            }).then(console.log('loose'))  
         };
 
     }else{
-        event.target.innerHTML = number;
+        
         event.target.classList.add('active');
+            event.target.innerHTML = 'nope';  
+            event.target.style.fontSize  = '2rem';
+
+            new Promise(() => {
+                setTimeout(()=>{
+                    event.target.innerHTML = number;
+                }, 1000)
+            }).then(console.log('win'))
+         
     };
 }, false);

@@ -2,55 +2,91 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: .3s ease;
 }
-.image{
-    overflow: hidden;
-    max-width: 300px;
-    height: 100px;
-    
-}
-img{
 
+.image {
+    overflow: hidden;
+    width: 300px;
+    height: 150px;
+    transition: .3s ease;
 }
+
+img {
+    width: 300px;
+    height: 250px;
+    /* max-width: 5%; */
+    object-fit: cover;
+    display: none;
+    transition: .3s ease;
+}
+
 body {
     transition: .3s ease;
-    background-color: rgb(255, 255, 255);
+    background: url(./img/jungle.webp);
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 10vh;
 }
-.container{
-    margin-right: 250px;
+.count{
+    background-color: rgba(194, 84, 0, 0.2);
+    padding: 25px;
+    border: 10px solid brown;
+    border-radius: 25px;
     display: flex;
-    border: 5px solid rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    /* margin-right: 150px; */
+}
+.container {
+    display: flex;
+    border: 25px solid rgb(40, 18, 0);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
     overflow: hidden;
+    transition: .3s ease;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    max-width: 500px;
+    font-size: 2rem;
+    background-color: rgba(194, 84, 0, 0.2);
+    border: 10px solid rgb(159, 71, 0);
+    border-radius: 25px;
+    padding: 25px;
+    transition: .3s ease;
 }
 
 li {
     transition: .3s ease;
-    opacity: 0.5;
+    opacity: 1;
     list-style: none;
     font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    
+    border: 5px solid rgb(68, 30, 0);
 }
-.text{
-    color: rgb(0, 0, 0);
-    max-width: 500px;
-    font-size: 2rem;
-}
+
 li:hover {
-    opacity: 1;
-    box-shadow: 0px 0px 1000px rgba(255, 255, 255, 0.500);
+    border-radius: 5px;
+    
+    border: 5px solid rgb(170, 76, 0);
 }
-li:active{
-    opacity: 0.8;
+
+li:active {
+    /* opacity: 0.8; */
     font-size: 1rem;
 }
 
@@ -59,65 +95,103 @@ li:active{
     display: grid;
     grid-template-columns: repeat(3, 0fr);
 }
-h1{
+
+h1 {
+    background-color: rgba(194, 84, 0, 0.2);
     color: rgb(0, 0, 0);
     width: 100%;
     text-align: center;
     font-size: 3rem;
     padding: 25px 0;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(74, 33, 0);
 }
 
 .list-item_1 {
     width: 100px;
     height: 100px;
-    background: blue;
+    background: rgba(0, 0, 255, 0.514);
+}
+
+.list-item_1:hover{
+    background: rgba(0, 0, 250, 1);
 }
 
 .list-item_2 {
     width: 100px;
     height: 100px;
-    background: red;
+    background: rgba(255, 0, 0, 0.534);
+}
+
+.list-item_2:hover{
+    background: rgba(255, 0, 0, 1);
 }
 
 .list-item_3 {
     width: 100px;
     height: 100px;
-    background: rgb(0, 255, 60);
+    background: rgba(0, 255, 60, 0.504);
+}
+
+.list-item_3:hover{
+    background: rgba(0, 255, 60, 1);
 }
 
 .list-item_4 {
     width: 100px;
     height: 100px;
-    background: rgb(217, 0, 255);
+    background: rgba(217, 0, 255, 0.536);
+}
+
+.list-item_4:hover{
+    background: rgba(217, 0, 250, 1);
 }
 
 .list-item_5 {
     width: 100px;
     height: 100px;
-    background: rgb(255, 251, 0);
+    background: rgba(255, 251, 0, 0.501);
+}
+
+.list-item_5:hover{
+    background: rgba(255, 251, 0, 1);
 }
 
 .list-item_6 {
     width: 100px;
     height: 100px;
-    background: rgb(0, 157, 255);
+    background: rgba(0, 157, 255, 0.551);
+}
+
+.list-item_6:hover{
+    background: rgba(0, 157, 250, 1);
 }
 
 .list-item_7 {
     width: 100px;
     height: 100px;
-    background: rgb(255, 149, 0);
+    background: rgba(255, 149, 0, 0.484);
+}
+
+.list-item_7:hover{
+    background: rgba(255, 149, 0, 1);
 }
 
 .list-item_8 {
     width: 100px;
     height: 100px;
-    background: rgb(140, 255, 0);
+    background: rgba(140, 255, 0, 0.515);
+}
+
+.list-item_8:hover{
+    background: rgba(140, 255, 0, 1);
 }
 
 .list-item_9 {
     width: 100px;
     height: 100px;
-    background: rgb(89, 0, 255);
+    background: rgba(89, 0, 255, 0.504);
+}
+
+.list-item_9:hover{
+    background: rgba(89, 0, 250, 1);
 }
